@@ -1,0 +1,319 @@
+/* 
+   BurguerFlow | La Brasa Industrial Style
+   Colors: Extracted from Logo
+   Design System: La Brasa Burger
+*/
+
+:root {
+    /* Colors from Logo */
+    --brasa-red: #8B1E10;
+    /* Logo Deep Red */
+    --brasa-orange: #D45D2A;
+    /* Logo Orange */
+    --brasa-yellow: #F4B41A;
+    /* Logo Yellow */
+    --brasa-black: #1A1A1A;
+    /* Industrial Black */
+    --brasa-white: #FFFFFF;
+    --brasa-cream: #FFF8E7;
+    /* Logo Background */
+
+    /* Design System Tokens (La Brasa Style) */
+    --font-heading: 'Bebas Neue', sans-serif;
+    --font-body: 'Montserrat', sans-serif;
+    --radius-btn: 8px;
+    --radius-card: 12px;
+    --space-lg: 80px;
+    --space-md: 40px;
+}
+
+/* Loader */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--brasa-black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.8s ease;
+}
+
+.loader-logo {
+    width: 120px;
+    border-radius: 50%;
+    animation: pulse 1.5s infinite;
+}
+
+.progress {
+    width: 0%;
+    height: 4px;
+    background: var(--brasa-orange);
+    transition: width 0.3s ease;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Base */
+body {
+    font-family: var(--font-body);
+    color: var(--brasa-black);
+    background-color: var(--brasa-white);
+    margin: 0;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Hide scrollbar but allow scrolling */
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+/* Navbar (La Brasa Industrial) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    /* Increased side padding */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(26, 26, 26, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid var(--brasa-orange);
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-logo {
+    height: 50px;
+    border-radius: 50%;
+}
+
+.nav-brand {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    color: var(--brasa-white);
+    letter-spacing: 2px;
+}
+
+.nav-links a {
+    color: var(--brasa-white);
+    text-decoration: none;
+    margin-left: 25px;
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--brasa-orange);
+}
+
+/* Hero (High Contrast) */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--brasa-black);
+    color: var(--brasa-white);
+    text-align: center;
+    padding: 100px 5% 50px;
+}
+
+.hero-content {
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.hero-logo {
+    width: 280px;
+    border-radius: 50%;
+    border: 4px solid var(--brasa-orange);
+    box-shadow: 0 0 50px rgba(212, 93, 42, 0.3);
+}
+
+.hero-text h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(3rem, 10vw, 5.5rem);
+    line-height: 0.9;
+    color: var(--brasa-orange);
+    margin: 0;
+}
+
+.hero-text p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--brasa-cream);
+}
+
+#flow-text {
+    color: var(--brasa-yellow);
+    font-weight: 700;
+    text-shadow: 0 0 20px rgba(244, 180, 26, 0.5);
+}
+
+/* Scroll Video (Oryzo/Industrial) */
+.scroll-video-container {
+    height: 400vh;
+    background: var(--brasa-black);
+}
+
+.sticky-video {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sticky-video canvas {
+    width: 100%;
+    height: 100%;
+}
+
+#hamb-video {
+    display: none;
+}
+
+.video-overlay {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    border-left: 5px solid var(--brasa-orange);
+    padding-left: 20px;
+}
+
+.video-overlay h2 {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    margin: 0;
+    color: var(--brasa-white);
+}
+
+/* Menu (La Brasa Cards) */
+.menu-section {
+    padding: var(--space-lg) 5%;
+    background: var(--brasa-white);
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 4rem;
+    text-align: center;
+    color: var(--brasa-red);
+    margin-bottom: 60px;
+}
+
+.burger-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.burger-card {
+    background: var(--brasa-black);
+    border-radius: var(--radius-card);
+    overflow: hidden;
+    color: var(--brasa-white);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.burger-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.burger-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.card-info {
+    padding: 30px;
+    text-align: left;
+}
+
+.card-info h3 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--brasa-orange);
+    margin: 0 0 10px;
+}
+
+/* Footer (Industrial Black) */
+.footer {
+    background: var(--brasa-black);
+    color: var(--brasa-white);
+    padding: var(--space-lg) 5%;
+    border-top: 4px solid var(--brasa-red);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-col h4 {
+    font-family: var(--font-heading);
+    color: var(--brasa-orange);
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.btn-ifood {
+    display: inline-block;
+    background: var(--brasa-red);
+    color: white;
+    padding: 15px 40px;
+    border-radius: var(--radius-btn);
+    text-decoration: none;
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    transition: background 0.3s;
+}
+
+.btn-ifood:hover {
+    background: #6b170c;
+}

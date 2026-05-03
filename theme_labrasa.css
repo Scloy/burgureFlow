@@ -1,0 +1,97 @@
+/* 
+   La Brasa Burger Design Tokens
+   Extracted from: https://site.labrasaburger.com.br
+*/
+
+:root {
+    /* Colors */
+    --brasa-orange: #F38118;
+    --brasa-black: #1A1A1A;
+    --brasa-white: #FFFFFF;
+    --brasa-gray: #F5F5F5;
+    
+    /* Typography */
+    --font-heading: 'Bebas Neue', sans-serif; /* Condensed & Bold */
+    --font-body: 'Montserrat', sans-serif;
+
+    /* Spacing */
+    --space-unit: 8px;
+    --space-md: 24px;
+    --space-lg: 48px;
+
+    /* Components */
+    --radius-button: 8px;
+    --radius-card: 12px;
+}
+
+/* Base Styles */
+body {
+    font-family: var(--font-body);
+    color: var(--brasa-black);
+    background-color: var(--brasa-white);
+    margin: 0;
+}
+
+/* Headings */
+h1, h2, h3, .heading-impact {
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    color: var(--brasa-orange);
+    letter-spacing: 1px;
+}
+
+/* Buttons */
+.btn-brasa {
+    display: inline-block;
+    background-color: var(--brasa-orange);
+    color: var(--brasa-white);
+    padding: 14px 28px;
+    border-radius: var(--radius-button);
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-brasa:hover {
+    background-color: #d66f12;
+    transform: translateY(-2px);
+}
+
+/* Dark Section / Cards */
+.dark-section {
+    background-color: var(--brasa-black);
+    color: var(--brasa-white);
+    padding: var(--space-lg) 0;
+}
+
+.card-brasa {
+    background: var(--brasa-white);
+    border-radius: var(--radius-card);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    color: var(--brasa-black);
+    transition: box-shadow 0.3s ease;
+}
+
+.card-brasa:hover {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+/* Form Elements */
+.input-brasa {
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 6px;
+    width: 100%;
+    margin-bottom: 16px;
+    outline: none;
+}
+
+.input-brasa:focus {
+    border-color: var(--brasa-orange);
+}

@@ -1,0 +1,98 @@
+/* 
+   Burdog Design Tokens
+   Extracted from: https://burdog.com.br
+*/
+
+:root {
+    /* Colors */
+    --burdog-green: #3D5A2E;
+    --burdog-black: #000000;
+    --burdog-white: #FFFFFF;
+    --burdog-gray: #F2F2F2;
+    --burdog-text-muted: #666666;
+    
+    /* Typography */
+    --font-primary: 'Montserrat', sans-serif;
+    
+    /* Spacing */
+    --space-sm: 12px;
+    --space-md: 24px;
+    --space-lg: 48px;
+
+    /* Components */
+    --radius-btn: 6px;
+    --radius-input: 4px;
+}
+
+/* Base Styles */
+body {
+    font-family: var(--font-primary);
+    color: var(--burdog-black);
+    background-color: var(--burdog-white);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Headings */
+h1, h2, h3 {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: var(--space-sm);
+}
+
+/* Buttons */
+.btn-burdog {
+    display: inline-block;
+    background-color: var(--burdog-green);
+    color: var(--burdog-white);
+    padding: 12px 24px;
+    border-radius: var(--radius-btn);
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: background 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-burdog:hover {
+    background-color: #2e4423;
+}
+
+/* Navigation */
+.nav-link {
+    color: var(--burdog-black);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: var(--burdog-green);
+}
+
+/* Sections */
+.section-gray {
+    background-color: var(--burdog-gray);
+    padding: var(--space-lg) 0;
+}
+
+/* Form Elements */
+.input-burdog {
+    background-color: var(--burdog-gray);
+    border: 1px solid transparent;
+    padding: 14px;
+    border-radius: var(--radius-input);
+    width: 100%;
+    font-family: var(--font-primary);
+    box-sizing: border-box;
+    outline: none;
+}
+
+.input-burdog:focus {
+    border-color: var(--burdog-green);
+}

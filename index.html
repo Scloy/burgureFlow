@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BurguerFlow | A Melhor Hamburgueria</title>
+    <link rel="icon" type="image/x-icon" href="logo_burguerflow.ico">
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&family=Pacifico&display=swap"
+        rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Loading Overlay -->
+    <div id="loader">
+        <div class="loader-content">
+            <img src="logo_burguerflow.jpeg" alt="Logo" class="loader-logo">
+            <div class="loader-bar">
+                <div class="progress"></div>
+            </div>
+            <p id="status-text"
+                style="color: var(--brasa-orange); font-family: 'Bebas Neue'; letter-spacing: 2px; margin-top: 20px;">
+                INICIALIZANDO O FLOW...</p>
+            <p id="frame-count" style="color: white; font-family: 'Montserrat'; font-size: 0.8rem; opacity: 0.5;">0 / 80
+            </p>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <nav class="navbar">
+            <div class="nav-left">
+                <span class="nav-brand">BurguerFlow</span>
+            </div>
+            <div class="nav-links">
+                <a href="#video-section">O Processo</a>
+                <a href="#menu">Cardápio</a>
+                <a href="#contato">Contato</a>
+            </div>
+        </nav>
+
+        <div class="hero-content">
+            <img src="logo_burguerflow.jpeg" alt="BurguerFlow" class="hero-logo">
+            <div class="hero-text">
+                <h1>A melhor hamburgueria que você poderia ver</h1>
+                <p>Venha comer e entre no <span id="flow-text">FLOW</span></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scroll Video Section -->
+    <section id="video-section" class="scroll-video-container">
+        <div class="sticky-video">
+            <video id="hamb-video" playsinline muted preload="auto">
+                <source src="burguer_flow_video.mp4" type="video/mp4">
+                Seu navegador não suporta vídeos.
+            </video>
+            <div class="video-overlay">
+                <h2>QUALIDADE EM CADA CAMADA</h2>
+                <p style="color: white;">Role lentamente para ver o Flow dos nossos ingredientes</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+        <h2 class="section-title">NOSSOS CLÁSSICOS</h2>
+        <div class="burger-grid">
+            <div class="burger-card">
+                <img src="burguer 1.jpeg" alt="Burguer 1">
+                <div class="card-info">
+                    <div class="card-header"
+                        style="display: flex; justify-content: space-between; align-items: baseline;">
+                        <h3>Flow Original</h3>
+                        <span class="price"
+                            style="color: var(--brasa-orange); font-family: 'Bebas Neue'; font-size: 1.8rem;">R$
+                            34</span>
+                    </div>
+                    <p>O clássico que deu início ao movimento.</p>
+                </div>
+            </div>
+            <div class="burger-card">
+                <img src="burguer 2.jpeg" alt="Burguer 2">
+                <div class="card-info">
+                    <div class="card-header"
+                        style="display: flex; justify-content: space-between; align-items: baseline;">
+                        <h3>Mini Flow</h3>
+                        <span class="price"
+                            style="color: var(--brasa-orange); font-family: 'Bebas Neue'; font-size: 1.8rem;">R$
+                            46</span>
+                    </div>
+                    <p>Mini clássico.</p>
+                </div>
+            </div>
+            <div class="burger-card">
+                <img src="burguer 3.jpeg" alt="Burguer 3">
+                <div class="card-info">
+                    <div class="card-header"
+                        style="display: flex; justify-content: space-between; align-items: baseline;">
+                        <h3>Costela Flow</h3>
+                        <span class="price"
+                            style="color: var(--brasa-orange); font-family: 'Bebas Neue'; font-size: 1.8rem;">R$
+                            53</span>
+                    </div>
+                    <p>Explosão de sabor em cada mordida.</p>
+                </div>
+            </div>
+            <div class="burger-card">
+                <img src="burguer frango.jpeg" alt="Burguer Frango">
+                <div class="card-info">
+                    <div class="card-header"
+                        style="display: flex; justify-content: space-between; align-items: baseline;">
+                        <h3>Chicken Flow</h3>
+                        <span class="price"
+                            style="color: var(--brasa-orange); font-family: 'Bebas Neue'; font-size: 1.8rem;">R$
+                            32</span>
+                    </div>
+                    <p>Leveza e crocância em sincronia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fries Section -->
+    <section class="menu-section" style="padding-top: 0;">
+        <h2 class="section-title">ACOMPANHAMENTOS</h2>
+        <div class="burger-grid">
+            <div class="burger-card">
+                <img src="batata_frita_normal.jpeg" alt="Batata Frita">
+                <div class="card-info">
+                    <div class="card-header"
+                        style="display: flex; justify-content: space-between; align-items: baseline;">
+                        <h3>Flow Fries</h3>
+                        <span class="price"
+                            style="color: var(--brasa-orange); font-family: 'Bebas Neue'; font-size: 1.8rem;">R$
+                            22</span>
+                    </div>
+                    <p>Crocantes por fora, macias por dentro. Sal marinho e páprica.</p>
+                </div>
+            </div>
+            <div class="burger-card">
+                <img src="batata_frinta_com_cheddar_e_bacon.jpeg" alt="Batata Cheddar e Bacon">
+                <div class="card-info">
+                    <div class="card-header"
+                        style="display: flex; justify-content: space-between; align-items: baseline;">
+                        <h3>Cheddar & Bacon Flow</h3>
+                        <span class="price"
+                            style="color: var(--brasa-orange); font-family: 'Bebas Neue'; font-size: 1.8rem;">R$
+                            28</span>
+                    </div>
+                    <p>Nossas fries cobertas com cheddar cremoso e bacon bits.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Drinks Section -->
+    <section class="menu-section" style="padding-top: 0;">
+        <h2 class="section-title">BEBIDAS</h2>
+        <div class="burger-grid">
+            <div class="burger-card">
+                <img src="refrigerante cola.jpeg" alt="Cola">
+                <div class="card-info">
+                    <div class="card-header"
+                        style="display: flex; justify-content: space-between; align-items: baseline;">
+                        <h3>Cola Flow</h3>
+                        <span class="price"
+                            style="color: var(--brasa-orange); font-family: 'Bebas Neue'; font-size: 1.8rem;">R$
+                            8</span>
+                    </div>
+                    <p>Refrescante e clássica, servida trincando.</p>
+                </div>
+            </div>
+            <div class="burger-card">
+                <img src="Faça_um_cerveja.jpeg" alt="Cerveja">
+                <div class="card-info">
+                    <div class="card-header"
+                        style="display: flex; justify-content: space-between; align-items: baseline;">
+                        <h3>Cerveja Artesanal</h3>
+                        <span class="price"
+                            style="color: var(--brasa-orange); font-family: 'Bebas Neue'; font-size: 1.8rem;">R$
+                            16</span>
+                    </div>
+                    <p>O par perfeito para o seu burger.</p>
+                </div>
+            </div>
+            <div class="burger-card">
+                <img src="faça_uma_agua.jpeg" alt="Agua">
+                <div class="card-info">
+                    <div class="card-header"
+                        style="display: flex; justify-content: space-between; align-items: baseline;">
+                        <h3>Água Mineral</h3>
+                        <span class="price"
+                            style="color: var(--brasa-orange); font-family: 'Bebas Neue'; font-size: 1.8rem;">R$
+                            6</span>
+                    </div>
+                    <p>Com ou sem gás, frescor puro.</p>
+                </div>
+            </div>
+            <div class="burger-card">
+                <img src="Faça_um_suco_de_uva.jpeg" alt="Suco de Uva">
+                <div class="card-info">
+                    <div class="card-header"
+                        style="display: flex; justify-content: space-between; align-items: baseline;">
+                        <h3>Suco de Uva Flow</h3>
+                        <span class="price"
+                            style="color: var(--brasa-orange); font-family: 'Bebas Neue'; font-size: 1.8rem;">R$
+                            12</span>
+                    </div>
+                    <p>Integral, sem conservantes, sabor intenso.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Desserts Section -->
+    <section class="menu-section" style="padding-top: 0;">
+        <h2 class="section-title">SOBREMESAS</h2>
+        <div class="burger-grid">
+            <div class="burger-card">
+                <img src="sorvete.jpeg" alt="Sorvete">
+                <div class="card-info">
+                    <div class="card-header"
+                        style="display: flex; justify-content: space-between; align-items: baseline;">
+                        <h3>Flow Ice Cream</h3>
+                        <span class="price"
+                            style="color: var(--brasa-orange); font-family: 'Bebas Neue'; font-size: 1.8rem;">R$
+                            22</span>
+                    </div>
+                    <p>Gelado artesanal cremoso e refrescante.</p>
+                </div>
+            </div>
+            <div class="burger-card">
+                <img src="burguer doce.jpeg" alt="Burguer Doce">
+                <div class="card-info">
+                    <div class="card-header"
+                        style="display: flex; justify-content: space-between; align-items: baseline;">
+                        <h3>Sweet Flow</h3>
+                        <span class="price"
+                            style="color: var(--brasa-orange); font-family: 'Bebas Neue'; font-size: 1.8rem;">R$
+                            28</span>
+                    </div>
+                    <p>Um burger feito inteiramente de chocolate e felicidade.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <footer id="contato" class="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>BURGURFLOW</h3>
+                <p>Sinta o ritmo do sabor.</p>
+            </div>
+            <div class="footer-col">
+                <h4>CONTATO</h4>
+                <p>quicksystemas@gmail.com</p>
+                <p>(11) 91238-6023</p>
+            </div>
+            <div class="footer-col">
+                <h4>LOCALIZAÇÃO</h4>
+                <p>São Sebastião do Paraíso - MG</p>
+            </div>
+            <div class="footer-col">
+                <h4>PEÇA AGORA</h4>
+                <a href="https://www.ifood.com.br/" class="btn-ifood">iFood</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

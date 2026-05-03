@@ -1,0 +1,102 @@
+/* 
+   Le Pinguê Design Tokens
+   Extracted from: https://www.lepingue.com.br
+*/
+
+:root {
+    /* Colors */
+    --color-primary: #9B0C15;    /* Burgundy */
+    --color-accent: #F9BA01;     /* Gold */
+    --color-bg-dark: #1A1A1A;    /* Dark Gray/Black */
+    --color-white: #FFFFFF;
+    --color-text-main: #1A1A1A;
+    --color-text-muted: #666666;
+
+    /* Typography */
+    --font-heading: 'RusticDisplay', serif; /* Use a distressed font */
+    --font-body: 'Montserrat', sans-serif;
+
+    /* Spacing */
+    --spacing-xs: 8px;
+    --spacing-sm: 16px;
+    --spacing-md: 32px;
+    --spacing-lg: 64px;
+    --spacing-xl: 80px;
+
+    /* Components */
+    --radius-pill: 50px;
+    --radius-sharp: 0px;
+}
+
+/* Base Styles */
+body {
+    font-family: var(--font-body);
+    color: var(--color-text-main);
+    line-height: 1.6;
+    margin: 0;
+    background-color: #f9f9f9; /* Fallback for texture */
+}
+
+/* Headings */
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    color: var(--color-primary);
+    letter-spacing: 2px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 32px;
+    border-radius: var(--radius-pill);
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-ghost {
+    background: transparent;
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+}
+
+.btn-ghost:hover {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+/* Cards */
+.card {
+    border-radius: var(--radius-sharp);
+    overflow: hidden;
+    background: var(--color-bg-dark);
+    color: var(--color-white);
+    position: relative;
+}
+
+.card img {
+    width: 100%;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+/* Inputs */
+.input-underline {
+    border: none;
+    border-bottom: 1px solid var(--color-text-muted);
+    background: transparent;
+    padding: 8px 0;
+    width: 100%;
+    outline: none;
+}
+
+.input-underline:focus {
+    border-bottom-color: var(--color-primary);
+}
